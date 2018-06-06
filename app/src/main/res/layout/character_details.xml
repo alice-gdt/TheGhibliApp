@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
+    android:id="@+id/char_detail_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -54,7 +55,6 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
-    //icon ???
 
     <TextView
         android:id="@+id/age"
@@ -85,8 +85,8 @@
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/hair_color"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/hair_color"
+        app:layout_constraintStart_toEndOf="@+id/hair_color" />
 
     <ListView
         android:id="@+id/film_list"
