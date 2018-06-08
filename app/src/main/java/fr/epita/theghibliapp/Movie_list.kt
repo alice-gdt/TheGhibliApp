@@ -21,48 +21,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
-data class Movie(val title : String,
-                 val director : String,
-                 val year : String,
-                 val description : String)
 
-class ViewHolder(val titleTextView: TextView, val directorTextView: TextView)
 
-/*class MovieListAdapter(private val context: Context, private val data: MutableList<Movie>) : BaseAdapter() {
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val currentItem: Movie = getItem(position)
-        val layoutInflater = LayoutInflater.from(context)
-        val rowView: View
-        val viewHolder : ViewHolder
-
-        if (convertView == null) {
-            rowView = layoutInflater.inflate(R.layout.movie_list, parent, false);
-            viewHolder = ViewHolder(rowView.findViewById(R.id.title), rowView.findViewById(R.id.director))
-        }
-        else
-        {
-            rowView = convertView
-            viewHolder = rowView.tag as ViewHolder
-        }
-        viewHolder.titleTextView.text = currentItem.title
-        viewHolder.directorTextView.text = System.getProperty("line.separator") + "    by " + currentItem.director
-        return rowView
-    }
-
-    override fun getItem(position: Int): Movie {
-        return data[position]
-    }
-
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
-    override fun getCount(): Int {
-        return data.size;
-    }
-}
-*/
 interface GhilbliService {
     @GET("films")
     fun list(): Call<List<Repo>>
@@ -128,8 +88,8 @@ class MovieList() : AppCompatActivity() {
         list.add(Movie("The Godfather part II", "Francis Ford Copola", "1974", "Acu 2020 best movie"))
         list.add(Movie("The Godfather part III", "Francis Ford Copola", "1990", "Acu 2022 best movie"))
 
-        /*activity_main_list_movie.emptyView = activity_main_txt_emptylist
+        activity_main_list_movie.emptyView = activity_main_txt_emptylist
         activity_main_list_movie.adapter = MovieListAdapter(this, list)
-        activity_main_list_movie.setOnItemClickListener { adapterView, clickedView, position, id -> Toast.makeText(this, "Clicked " + position, Toast.LENGTH_SHORT).show() }*/
+        activity_main_list_movie.setOnItemClickListener { adapterView, clickedView, position, id -> Toast.makeText(this, "Clicked " + position, Toast.LENGTH_SHORT).show() }
     }
 }
