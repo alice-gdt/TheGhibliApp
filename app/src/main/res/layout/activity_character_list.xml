@@ -3,36 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CharacterList">
 
     <Button
         android:id="@+id/back_to_menu"
         android:layout_width="69dp"
         android:layout_height="37dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Back"
         app:layout_constraintBottom_toTopOf="@+id/list_of_char"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ListView
         android:id="@+id/list_of_char"
         android:layout_width="1090dp"
-        android:layout_height="0dp"
+        android:layout_height="444dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="24dp"
         android:divider="#000000"
         android:dividerHeight="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filter"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/characters"
@@ -48,27 +49,5 @@
         android:layout_height="wrap_content"
         android:text="This list is empty"
         android:visibility="gone" />
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/filter"
-        android:layout_width="195dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/back_to_menu"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <android.support.design.widget.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="hint" />
-
-    </android.support.design.widget.TextInputLayout>
 
 </android.support.constraint.ConstraintLayout>

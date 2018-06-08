@@ -3,7 +3,6 @@ package fr.epita.theghibliapp
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.character_list.*
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -12,9 +11,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (v!= null) {
             when (v.id) {
                 R.id.buttonChar -> {
-                    //val intent = Intent(this, CharactersList::class.java)
-                    //startActivity(intent)
-                    setContentView(R.layout.character_list)
+                    val intent = Intent(this, CharacterList::class.java)
+                    startActivity(intent)
+                    //setContentView(R.layout.character_list)
                 }
                 R.id.buttonFilm -> {
                     setContentView(R.layout.movie_list)
@@ -22,9 +21,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 R.id .buttonQuiz -> {
                     val intent = Intent(this ,QuizActivity::class.java)
                     startActivity(intent)
-                }
-                R.id.back_to_menu -> {
-                    setContentView(R.layout.activity_main)
                 }
             }
         }

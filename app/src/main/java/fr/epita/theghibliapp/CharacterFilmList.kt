@@ -32,7 +32,7 @@ class CharacterFilmList(
         val currentItem: Film = getItem(position)
         val layoutInflater = LayoutInflater.from(context)
         val rowView = layoutInflater.inflate(
-                R.layout.character_list,
+                R.layout.activity_character_list,
                 parent,
                 false
         );
