@@ -7,18 +7,13 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-data class Film (
-        val name : String,
-        val produceur : String
-)
-
 class CharacterFilmList(
         private val context: Context,
-        private val data: MutableList<Film>) : BaseAdapter() {
+        private val data: MutableList<Movie>) : BaseAdapter() {
     override fun getCount(): Int {
         return data.size
     }
-    override fun getItem(position: Int): Film {
+    override fun getItem(position: Int): Movie {
         return data[position]
     }
     override fun getItemId(position: Int): Long {
@@ -29,7 +24,7 @@ class CharacterFilmList(
             position: Int,
             convertView: View?,
             parent: ViewGroup?): View {
-        val currentItem: Film = getItem(position)
+        val currentItem: Movie = getItem(position)
         val layoutInflater = LayoutInflater.from(context)
         val rowView = layoutInflater.inflate(
                 R.layout.activity_character_list,
@@ -37,7 +32,7 @@ class CharacterFilmList(
                 false
         );
         val nameTextView = rowView.findViewById<TextView>(R.id.characters)
-        nameTextView.text = currentItem.name
+        nameTextView.text = currentItem.title
         return rowView;
     }
 }
