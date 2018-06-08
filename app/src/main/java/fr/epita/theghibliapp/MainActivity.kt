@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 R.id.buttonFilm -> {
                     //val intent = Intent(this, CharactersList::class.java)
                     //startActivity(intent)
-                    //setContentView(R.layout.Arthur_Stuff)
+                    setContentView(R.layout.movie_list)
                 }
                 R.id .buttonQuiz -> {
                     //val intent = Intent(this, CharactersList::class.java)
