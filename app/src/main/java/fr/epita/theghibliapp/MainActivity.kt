@@ -17,14 +17,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     setContentView(R.layout.character_list)
                 }
                 R.id.buttonFilm -> {
-                    //val intent = Intent(this, CharactersList::class.java)
-                    //startActivity(intent)
                     setContentView(R.layout.movie_list)
                 }
                 R.id .buttonQuiz -> {
-                    //val intent = Intent(this, CharactersList::class.java)
-                    //startActivity(intent)
-                    setContentView(R.layout.quiz)
+                    val intent = Intent(this ,QuizActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.back_to_menu -> {
                     setContentView(R.layout.activity_main)
