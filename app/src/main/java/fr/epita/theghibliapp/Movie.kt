@@ -23,7 +23,7 @@ class MovieListAdapter(private val context: Context, private val data: MutableLi
         val viewHolder : ViewHolder
 
         if (convertView == null) {
-            rowView = layoutInflater.inflate(R.layout.movie_list, parent, false);
+            rowView = layoutInflater.inflate(R.layout.activity_movie_activity, parent, false);
             viewHolder = ViewHolder(rowView.findViewById(R.id.title), rowView.findViewById(R.id.director))
         }
         else
