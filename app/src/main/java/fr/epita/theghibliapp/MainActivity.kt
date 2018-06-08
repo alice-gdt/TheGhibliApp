@@ -12,20 +12,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (v!= null) {
             when (v.id) {
                 R.id.buttonChar -> {
-                    val intent = Intent(this, CharactersList::class.java)
-                    startActivity(intent)
-
-
+                    //val intent = Intent(this, CharactersList::class.java)
+                    //startActivity(intent)
+                    setContentView(R.layout.character_list)
                 }
                 R.id.buttonFilm -> {
-                    val intent = Intent(this, CharactersList::class.java)
-                    startActivity(intent)
-
+                    //val intent = Intent(this, CharactersList::class.java)
+                    //startActivity(intent)
+                    //setContentView(R.layout.Arthur_Stuff)
                 }
                 R.id .buttonQuiz -> {
-                    val intent = Intent(this, CharactersList::class.java)
-                    startActivity(intent)
-
+                    //val intent = Intent(this, CharactersList::class.java)
+                    //startActivity(intent)
+                    setContentView(R.layout.quiz)
+                }
+                R.id.back_to_menu -> {
+                    setContentView(R.layout.activity_main)
                 }
             }
         }

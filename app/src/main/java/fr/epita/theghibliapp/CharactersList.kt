@@ -41,15 +41,24 @@ class CharactersList(
     }
 }
 
-class Characters_screen : AppCompatActivity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
-            //list_of_char.emptyView = character_list_emptylist
-            val data: MutableList<Characters> = arrayListOf()
-            data.add(Characters("Han", "Solo", "Star Wars", true))
-            data.add(Characters("Darth", "Vader", "Star Wars", false))
-// Link the adapter and the listview
-            list_of_char.adapter = CharactersList(this, data)
+class Characters_screen : AppCompatActivity(), View.OnClickListener {
+    override fun onClick(v: View?) {
+        if (v!= null) {
+            when (v.id) {
+                R.id.back_to_menu -> {
+                    setContentView(R.layout.activity_main)
+                }
+            }
         }
+    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.character_list)
+        //list_of_char.emptyView = character_list_emptylist
+        val data: MutableList<Characters> = arrayListOf()
+        data.add(Characters("Han", "Solo", "Star Wars", true))
+        data.add(Characters("Darth", "Vader", "Star Wars", false))
+// Link the adapter and the listview
+        list_of_char.adapter = CharactersList(this, data)
+    }
 }
